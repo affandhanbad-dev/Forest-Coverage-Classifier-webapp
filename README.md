@@ -5,6 +5,8 @@ It includes both a **model training notebook** and a **Streamlit web app** for e
 
 ---
 
+![Forest Classifier Web](webapp_code/forest_web.png)
+
 ## 🚀 Features
 
 - Performs **Exploratory Data Analysis (EDA)** on the dataset  
