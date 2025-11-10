@@ -51,7 +51,7 @@ st.markdown("<h1>🌲 Forest Coverage Type Predictor 🌲</h1>", unsafe_allow_ht
 st.write("### Enter your input values (comma-separated) to predict the forest cover type.")
 
 image = Image.open('assets/mainimage.jpg')
-st.image(image, use_container_width=True)
+st.image(image)
 
 user_input = st.text_input("🧮 Enter the feature values (comma-separated):", placeholder="Example: 2596,51,3,258,0,510,...")
 
@@ -81,7 +81,7 @@ if user_input:
                 st.markdown(f"<p class='result'>{forest_name}</p>", unsafe_allow_html=True)
             with col2:
                 cover_image = Image.open(forest_image)
-                st.image(cover_image, use_container_width=True)
+                st.image(cover_image)
         else:
             st.error("⚠️ Prediction could not be determined.")
     except Exception as e:
