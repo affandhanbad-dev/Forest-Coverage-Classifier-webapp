@@ -50,7 +50,7 @@ st.markdown("""
 st.markdown("<h1>🌲 Forest Coverage Type Predictor 🌲</h1>", unsafe_allow_html=True)
 st.write("### Enter your input values (comma-separated) to predict the forest cover type.")
 
-image = Image.open('mainimage2.jpg')
+image = Image.open('assets/mainimage2.jpg')
 st.image(image, use_container_width=True)
 
 user_input = st.text_input("🧮 Enter the feature values (comma-separated):", placeholder="Example: 2596,51,3,258,0,510,...")
@@ -61,13 +61,13 @@ if user_input:
         features = np.array(user_input, dtype=np.float32).reshape(1, -1)
         output = model.predict(features)
         cover_type_dict = {
-            0: {"name": "Spruce/Fir", "image": "Spruce,Fir.jpg"},
-            1: {"name": "Lodgepole Pine", "image": "lodgepole.jpg"},
-            2: {"name": "Ponderosa Pine", "image": "Ponderosa.jpg"},
-            3: {"name": "Cottonwood/Willow", "image": "Cottonwood,Willow.jpg"},
-            4: {"name": "Aspen", "image": "Aspen.jpg"},
-            5: {"name": "Douglas-fir", "image": "Douglas.jpg"},
-            6: {"name": "Krummholz", "image": "Krummholz.jpg"}
+            0: {"name": "Spruce/Fir", "image": "assets/Spruce,Fir.jpg"},
+            1: {"name": "Lodgepole Pine", "image": "assets/lodgepole.jpg"},
+            2: {"name": "Ponderosa Pine", "image": "assets/Ponderosa.jpg"},
+            3: {"name": "Cottonwood/Willow", "image": "assets/Cottonwood,Willow.jpg"},
+            4: {"name": "Aspen", "image": "assets/Aspen.jpg"},
+            5: {"name": "Douglas-fir", "image": "assets/Douglas.jpg"},
+            6: {"name": "Krummholz", "image": "assets/Krummholz.jpg"}
         }
         prediction = int(output[0])
         prediction_info = cover_type_dict.get(prediction, None)
