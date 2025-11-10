@@ -6,7 +6,9 @@ COPY requirements.txt .
 
 RUN pip install --upgrade pip setuptools wheel
 
-RUN pip install --no-cache-dir --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt
+RUN pip install --no-cache-dir streamlit==1.39.0
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
