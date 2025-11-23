@@ -5,11 +5,8 @@ It includes both a **model training notebook**, **Streamlit web app** & a **Dock
 
 ---
 
-<<<<<<< HEAD
-=======
 ![Forest Classifier Web](web-Docker-code/assets/forest_web.png)
 
->>>>>>> 97c1f82 (fixing the assets folder)
 ## 🚀 Features
 
 - Performs **Exploratory Data Analysis (EDA)** on the dataset  
